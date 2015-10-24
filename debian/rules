@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+DH_VERBOSE = 1
+export PYBUILD_DESTDIR_python2=debian/python-mmh3
+export PYBUILD_DESTDIR_python3=debian/python3-mmh3
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
